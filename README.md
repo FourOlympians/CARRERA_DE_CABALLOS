@@ -1,2 +1,20 @@
-# CARRERA_DE_CABALLOS
-APP WEB PARA UN JUEGO "CARRERA DE CABALLOS"
+# 🐎 Carrera de Caballos
+
+![GitHub repo size](https://img.shields.io/github/repo-size/usuario/CARRERA_DE_CABALLOS?color=blue)
+![GitHub contributors](https://img.shields.io/github/contributors/usuario/CARRERA_DE_CABALLOS)
+![GitHub stars](https://img.shields.io/github/stars/usuario/CARRERA_DE_CABALLOS?style=social)
+![GitHub forks](https://img.shields.io/github/forks/usuario/CARRERA_DE_CABALLOS?style=social)
+
+## 📌 Descripción
+Un proyecto en **HTML, CSS y JavaScript** que simula una divertida carrera de caballos 🏇.  
+Este proyecto fue creado con fines de práctica y aprendizaje en programación web.
+
+---
+
+## 🚀 Tecnologías usadas
+- ⚡ **HTML5** → estructura del proyecto  
+- 🎨 **CSS3** → estilos y diseño  
+- 💻 **JavaScript** → lógica de la carrera  
+
+---
+
