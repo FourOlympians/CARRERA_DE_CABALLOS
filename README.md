@@ -1,9 +1,9 @@
 # 🐎 Carrera de Caballos
 
-![GitHub repo size](https://img.shields.io/github/repo-size/usuario/CARRERA_DE_CABALLOS?color=blue)
-![GitHub contributors](https://img.shields.io/github/contributors/usuario/CARRERA_DE_CABALLOS)
-![GitHub stars](https://img.shields.io/github/stars/usuario/CARRERA_DE_CABALLOS?style=social)
-![GitHub forks](https://img.shields.io/github/forks/usuario/CARRERA_DE_CABALLOS?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/FourOlympians/CARRERA_DE_CABALLOS?color=blue)
+![GitHub contributors](https://img.shields.io/github/contributors/FourOlympians/CARRERA_DE_CABALLOS)
+![GitHub stars](https://img.shields.io/github/stars/FourOlympians/CARRERA_DE_CABALLOS?style=social)
+![GitHub forks](https://img.shields.io/github/forks/FourOlympians/CARRERA_DE_CABALLOS?style=social)
 
 ## 📌 Descripción
 Un proyecto en **HTML, CSS y JavaScript** que simula una divertida carrera de caballos 🏇.  
