@@ -3,7 +3,39 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 import { toast } from 'wc-toast'
+import { shuffle } from 'lodash'
 
+
+class Card {
+    /**
+     * 
+     * @param {string} tipo_carta 
+     * @param {string} nombre 
+     * @param {string} img 
+     */
+    constructor(tipo_carta, nombre, img) {
+     
+       this.tipo = tipo_carta
+       this.nombre = nombre
+       this.img = img;
+    }
+}
+
+function createDeck() {
+    let tipos = ['E', 'B', 'C', 'O'];
+
+    let mazo = []
+    for (let tipo of tipos) {
+        for (let i = 1; i <= 12; i++ ) {
+            let carta = new Card(tipo, `${i}${tipo}`, `/cards/${i}${tipo}.jpg`)
+            mazo.push(carta)
+        }
+
+    }
+
+
+    return mazo;
+}
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -32,6 +64,16 @@ const toastBtn = document.querySelector('#toast')
 toastBtn.addEventListener('click', () => {
     toast('click!')
 })
+
+const originalDeck = createDeck()
+const horses = originalDeck.filter(c => c.nombre.includes('11'))
+const deck = shuffle(originalDeck.filter(c => !c.nombre.includes('11')))
+
+console.log(deck)
+
+//for (let i = 0; i < deck.length; i++) {
+//}
+
 
 
 setupCounter(document.querySelector('#counter'))
