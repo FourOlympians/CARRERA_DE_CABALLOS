@@ -75,8 +75,6 @@ console.log(deck)
 //}
 setupCounter(document.querySelector('#counter'))
 
-
-
 // Animaciones de barajear
 //lapipol tilin
 //wuuuuuuuuu

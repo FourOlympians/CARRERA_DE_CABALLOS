@@ -126,7 +126,7 @@ body {
   }
 
   .reverso {
-    background-image: url("dorso.jpeg");
+    background-image: url("/public/cartas/REVERSO.png");
     background-size: cover;
     background-position: center;
   }
