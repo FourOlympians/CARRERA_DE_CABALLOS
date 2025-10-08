@@ -1,96 +1,147 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
+  background: #1b1b1b;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.tablero {
+  display: flex;
+  border: 5px solid #3b2f1c;
+  border-radius: 10px;
+  width: 1110px;
+  height: 845px;
+  aspect-ratio: 15 / 9;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.zona-pista {
+  flex: 3;
+  background: #3a2b1f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-right: 4px solid #222;
+}
+
+.meta {
+  color: rgb(0, 0, 0);
   text-align: center;
+  align-content: flex-start;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+
+  /* Fondo base negro */
+  background-color: #000;
+
+  /* Patrón de rombos negro y café */
+  background-image:
+    linear-gradient(45deg, #ffffff 25%, transparent 25%),
+    linear-gradient(-45deg, #ffffff 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ffffff 75%),
+    linear-gradient(-45deg, transparent 75%, #ffffff 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+  transform: rotate(0deg) skewY(0deg);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.pista {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  flex: 1;
 }
 
-.card {
-  padding: 2em;
+.carril {
+  position: relative;
+  background: linear-gradient(to bottom, #8d6e63 0%, #6d4c41 100%);
+  border-radius: 10px;
+  border: 5px solid #3e2723;
+  overflow: hidden;
+  min-width: 640px; /* 8 escalones de 80px */
+  height: 150px;
+  align-content: center;
 }
 
-.read-the-docs {
-  color: #888;
+.zona-lateral {
+  flex: 1;
+  align-items: center;
+  background: #1e2b22;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.baraja {
+  background: #4e5d4c;
+  color: white;
+  text-align: center;
+  align-content: center;
+  border-radius: 6px;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  height: 140px;
+  width: 140px;
+  order: 8;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.cartas {
+  display: flex;
+  flex-direction: row;
+  gap: 19.8px;
+  transform: translateX(15px); 
+}
+
+.carta {
+  background: #3a4b38;
+  border: 2px solid #8bc34a;
+  height: 120px;
+  width: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carta::after {
+  content: "↔️";
+  color: white;
+  font-size: 1.2em;
+}
+
+.casillas_carril{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  transform: translateX(20px); 
+}
+
+.casilla{
+  background: #3b2828;
+  border: 5px solid #101608;
+  height: 120px;
+  width: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.casilla_inicio{
+  background: #4b2111b5;
+  border: 5px solid #321313f3;
+  height: 120px;
+  width: 80px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(30px); 
 }
