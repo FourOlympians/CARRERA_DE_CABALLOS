@@ -96,9 +96,9 @@ body {
   display: flex;
   flex-direction: row;
   gap: 19.8px;
-  transform: translateX(15px); 
+  transform: translateX(15px);
 }
-
+/*Hola jaime modifique esto cawn */
 .carta {
   background: #3a4b38;
   border: 2px solid #8bc34a;
