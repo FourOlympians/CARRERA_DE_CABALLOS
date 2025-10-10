@@ -37,33 +37,7 @@ function createDeck() {
     return mazo;
 }
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>el Caballo</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-     <div class="card">
-      <button id="toast" type="button">Tostada</button>
-    </div>
-    
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
 
-const toastBtn = document.querySelector('#toast')
-
-toastBtn.addEventListener('click', () => {
-    toast('click!')
-})
 
 const originalDeck = createDeck()
 const horses = originalDeck.filter(c => c.nombre.includes('11'))
@@ -71,14 +45,6 @@ const deck = shuffle(originalDeck.filter(c => !c.nombre.includes('11')))
 
 console.log(deck)
 
-//for (let i = 0; i < deck.length; i++) {
-//}
-setupCounter(document.querySelector('#counter'))
-
-// Animaciones de barajear
-//lapipol tilin
-//wuuuuuuuuu
-// 8==D ~~~~~ 
   const mesa = document.getElementById('mesa');
   const btn = document.getElementById('barajearBtn');
 
@@ -146,7 +112,7 @@ setupCounter(document.querySelector('#counter'))
         carta.style.zIndex = i;
       });
       btn.disabled = false; 
-    }, 4000);
+    }, 3700);
   }
 
   btn.addEventListener('click', barajear);
